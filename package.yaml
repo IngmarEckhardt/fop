@@ -1,0 +1,32 @@
+name: fopProject
+version: 0.1.0.0
+license: Unlicense
+license-file: LICENSE
+category: Unclassified
+
+
+language: GHC2021
+
+dependencies:
+  - base >= 4.13 && < 5
+  - leancheck >= 1.0.2
+
+
+internal-libraries:
+  fopLib:
+    source-dirs: src/fopLib
+
+
+executables:
+  FOP-exe:
+    main: FOP.hs
+    source-dirs: src
+    ghc-options:
+      -with-rtsopts=-N4
+      -Wno-partial-type-signatures
+    dependencies:
+      - fopLib
+    when:
+      - condition: false
+        other-modules: Paths_fopProject
+

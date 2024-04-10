@@ -1,0 +1,8 @@
+cradle:
+  stack:
+    stackYaml: stack.yaml
+    components:
+      - path: "./src/fopLib"
+        component: "fopLib:lib"
+      - path: "./src/FOP.hs"
+        component: "fopProject:exe:FOP"
