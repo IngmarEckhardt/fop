@@ -2,5 +2,5 @@ module Main where
 
 import FopLib1
 
-main = putStrLn "Hello FOP"
-
+main :: IO ()
+main = putStrLn $ intervalFunction numbersSet
