@@ -1,6 +1,14 @@
+{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE KindSignatures #-}
+
 module Main where
 
 import FopLib1
 
+
+import GHC.TypeLits
+import Data.Proxy
+
 main :: IO ()
-main = putStrLn $ intervalFunction numbersSet
+
+main = putStrLn $ secondIntervalFunctionFinal numbersSet
